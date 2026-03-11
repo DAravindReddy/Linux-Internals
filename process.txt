@@ -1,0 +1,81 @@
+
+Methods of creating the new process
+
+1. system(): -> library call
+2. fork():  -> sys call
+3. family of exec : -> library call
+
+1. system(): it is used for basic linux commands
+eg:
+int main()
+{
+	int x = system("ls");
+	printf("%d\n", x);
+	return 0;
+
+}
+
+2. fork():
+it is a system call.
+it will create a child process
+syntax: pid_t fork(void);
+Eg: int main()
+{
+pf("before fork\n");
+fork();
+pf("after fork\n");
+}
+
+on success fork will return 'child pid' on parrent process, '0' on child.
+on failure fork will return -1
+
+
+
+zombie process: 
+A process completed the execution, waiting for clean up
+
+
+orphan process: 
+A process who don't have any parent.
+
+
+Wait family:
+Functionalities of wait syscalls:
+1. It will wait for the child process till child get complete.
+2. It will collect the child exit code on child termination
+3. It will clear the resourse for the child process.
+4. It will suspends the parent execution till the child get complete.
+
+wait()->it will wait for the child who terminate 1st.
+pid_t wait(int *Nullable);
+wstatus-> the child exit code
+return value-> on success child pid, on fail -1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
