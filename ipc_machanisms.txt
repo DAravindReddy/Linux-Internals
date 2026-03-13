@@ -1,0 +1,18 @@
+Categories of system calls:
+
+1. Kernel information
+2. File Operations
+3. Process management
+4. IPC
+5. Device management
+
+
+
+4. IPC mechanisms:
+->pipe
+->fifo
+->shm
+->signal
+->socket
+
+1. pipe
