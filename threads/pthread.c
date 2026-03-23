@@ -22,6 +22,8 @@ int main()
 		printf("Thread is not created\n");
 		return -1;
 	}
+	//sleep(5);
 	pthread_join(tid, NULL);
+	printf("Back in main thread\n");
 
 }
